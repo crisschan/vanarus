@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+<block wx:for-items="{{carInfoData}}">
+    <view class='card  b-shadow' bindtap='toggleBtn' data-id="{{item.id}}" data-index="{{index}}">
+      <view class='nearCard-fl'>
+        <image src='cloud://vanarus-49df1f.7661-vanarus-49df1f/{{item.id}}.jpeg'></image>
+      </view>
+      <view class='nearCard-fr'>
+        <view>
+          <text class='c-green'>{{item.useDate}}</text>
+        </view>
+        <view>From：
+          <text class='c-green'>{{item.cx}}</text>
+        </view>
+        <view>Date：
+          <text class='c-green'>{{item.time}}</text>
+        </view>
+       
+      </view>
+      
+    </view>
+  </block>
+
+
+</view>

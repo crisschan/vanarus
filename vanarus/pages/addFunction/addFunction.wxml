@@ -1,0 +1,6 @@
+<!--pages/addFunction/addFunction.wxml-->
+<view class="container">
+
+  <web-view src="{{url}}"></web-view>
+
+</view>
