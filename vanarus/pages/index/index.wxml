@@ -1,5 +1,13 @@
 <!--index.wxml-->
 <view class="container">
+ <view class='nearCard-fr'>
+<contact-button 
+  type="default-light" 
+  size="20"
+  session-from="weapp"
+>
+ <text class='c-green'>Waiting For U</text>
+</contact-button></view>
 <block wx:for-items="{{carInfoData}}">
     <view class='card  b-shadow' bindtap='toggleBtn' data-id="{{item.id}}" data-index="{{index}}">
       <view class='nearCard-fl'>
@@ -20,11 +28,7 @@
       
     </view>
   </block>
-<contact-button 
-  type="default-light" 
-  size="20"
-  session-from="weapp"
->
-</contact-button>
+
+
 
 </view>
