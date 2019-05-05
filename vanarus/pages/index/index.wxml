@@ -8,6 +8,7 @@
 >
  <text class='c-green'>Waiting For U</text>
 </contact-button></view>
+
 <block wx:for-items="{{carInfoData}}">
     <view class='card  b-shadow' bindtap='toggleBtn' data-id="{{item.id}}" data-index="{{index}}">
       <view class='nearCard-fl'>
@@ -27,8 +28,7 @@
       </view>
       
     </view>
-  </block>
-
-
-
+    
+  </block> 
+  <view class='card  b-shadow' bindtap='toggleBtn'><ad unit-id="adunit-e85077bbd5f3ed57"></ad></view>
 </view>

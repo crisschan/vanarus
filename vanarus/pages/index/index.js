@@ -1,6 +1,7 @@
 //index.js
 const app = getApp()
 
+
 // pages/myOrder/myOrder.js
 Page({
 
@@ -15,7 +16,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
+    // 在页面onLoad回调事件中创建插屏广告实例
+  
   },
 
   //切换隐藏和显示 
@@ -43,6 +46,8 @@ Page({
     var data = {
       "datas": null
     }
+    
+    
     app.globalData.DB.collection('varanruslist').get({
       success(res) {
         data = {
