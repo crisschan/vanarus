@@ -30,7 +30,14 @@ Page({
       url: '../addFunction/addFunction?id='+id,
     })
   },
+  toggleBtnhistry: function (e) {
+    var that = this;
 
+    var id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../chooseLib/chooseLib?id=11',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -48,13 +55,14 @@ Page({
     }
     
     
-    app.globalData.DB.collection('varanruslist').get({
+    app.globalData.DB.collection('varanruslist').limit(10).get({
       success(res) {
         data = {
           "datas": res.data
         }
         that.setData({
           carInfoData: data.datas
+          
         })
       }
     })

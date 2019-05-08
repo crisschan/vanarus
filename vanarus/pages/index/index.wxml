@@ -30,5 +30,28 @@
     </view>
     
   </block> 
-  <view class='card  b-shadow' bindtap='toggleBtn'><ad unit-id="adunit-e85077bbd5f3ed57"></ad></view>
+  
+
+
+<view class='card  b-shadow'><ad unit-id="adunit-e85077bbd5f3ed57"></ad></view>
+
+<view class='card  b-shadow' bindtap='toggleBtnhistry'>
+ 
+      <view class='nearCard-fl'>
+        <image src='../../images/all.png'></image>
+      </view>
+      <view class='nearCard-fr'>
+        <view>
+          <text class='c-green'>历史文章快捷访问</text>
+        </view>
+        <view>From：
+          <text class='c-green'>V社北京</text>
+        </view>
+        <view>Date：
+          <text class='c-green'>Now</text>
+        </view>
+       
+      </view>
+      
+</view>
 </view>

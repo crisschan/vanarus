@@ -11,6 +11,8 @@
 	"appid": "wxc384f9916e54e09c",
 	"projectname": "vanarus",
 	"libVersion": "2.2.5",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
