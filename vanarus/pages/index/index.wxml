@@ -1,13 +1,6 @@
 <!--index.wxml-->
 <view class="container">
- <view class='nearCard-fr'>
-<contact-button 
-  type="default-light" 
-  size="20"
-  session-from="weapp"
->
- <text class='c-green'>Waiting For U</text>
-</contact-button></view>
+
 
 <block wx:for-items="{{carInfoData}}">
     <view class='card  b-shadow' bindtap='toggleBtn' data-id="{{item.id}}" data-index="{{index}}">
@@ -42,16 +35,24 @@
       </view>
       <view class='nearCard-fr'>
         <view>
-          <text class='c-green'>历史文章快捷访问</text>
+          <text class='c-green'>彩蛋：巨蜥历史文章穿梭机</text>
         </view>
         <view>From：
-          <text class='c-green'>V社北京</text>
+          <text class='c-green'>小巨蜥</text>
         </view>
         <view>Date：
-          <text class='c-green'>Now</text>
+          <text class='c-green'>2099-12-31</text>
         </view>
        
       </view>
       
 </view>
+ <view class='nearCard-fr'>
+<contact-button 
+  type="default-light" 
+  size="20"
+  session-from="weapp"
+>
+ <text class='c-green'>Waiting For U</text>
+</contact-button></view>
 </view>
