@@ -2,10 +2,11 @@
 <view class="container">
 
 
-<block wx:for-items="{{carInfoData}}">
+
+<block wx:for="{{carInfoData}}" wx:for-items="{{carInfoData}}" wx:key="id">
     <view class='card  b-shadow' bindtap='toggleBtn' data-id="{{item.id}}" data-index="{{index}}">
       <view class='nearCard-fl'>
-        <image src='cloud://vanarus-49df1f.7661-vanarus-49df1f/{{item.id}}.jpeg'></image>
+        <image src='cloud://vanarus-49df1f.7661-vanarus-49df1f/indexlist/{{item.id}}.jpeg'></image>
       </view>
       <view class='nearCard-fr'>
         <view>
@@ -35,7 +36,7 @@
       </view>
       <view class='nearCard-fr'>
         <view>
-          <text class='c-green'>彩蛋：巨蜥历史文章穿梭机</text>
+          <text class='c-green'>时光机(历史文章）</text>
         </view>
         <view>From：
           <text class='c-green'>小巨蜥</text>

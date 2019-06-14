@@ -1,40 +1,130 @@
-// pages/chooseLib/chooseLib.js
+//index.js
 const app = getApp()
-let interstitialAd = null
+
+
+// pages/myOrder/myOrder.js
 Page({
 
+  /**
+   * 页面的初始数据
+   */
   data: {
-    url: ''
+    uhide: 0
   },
-  onShow:function(){
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
 
-    // 在适合的场景显示插屏广告
-    if (interstitialAd) {
-      interstitialAd.show().catch((err) => {
-        console.error(err)
-      })
-    }
+    // 在页面onLoad回调事件中创建插屏广告实例
+
   },
-  onLoad: function(options) {
-    if (wx.createInterstitialAd) {
-      interstitialAd = wx.createInterstitialAd({
-        adUnitId: 'adunit-cedc5db694a00cb3'
-      })
-      interstitialAd.onLoad(() => { })
-      interstitialAd.onError((err) => { })
-      interstitialAd.onClose(() => { })
-    }
-   
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  //切换隐藏和显示 
+  toggleBtn: function (e) {
     var that = this;
-    app.globalData.DB.collection('varanruslist').where({
-      id: options.id
-    }).get({
-      success(res) {
-        var url = res.data[0]['url']
-        that.setData({
-          url: url
-        })
-      }
+
+    var id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../databaseGuide/databaseGuide?id=' + id,
     })
   },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    var that = this;
+    var data = {
+      "listdatas": null
+    }
+
+
+    app.globalData.DB.collection('historylist').get({
+      
+      success(res) {
+       
+        data = {
+          "listdatas": res.data
+        }
+        that.setData({
+          carInfoData: data.listdatas
+
+        })
+      },
+      
+    })
+
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
 })
+
+/*
+Page({
+  data: {
+    uhide: 0
+  },
+
+
+  onLoad: function() {
+    var that = this;
+    var data ={}
+    app.globalData.DB.collection('varanruslist').get({
+      success(res) {
+        //console.log(res.data)
+         data = {
+          "datas": res.data
+        };
+      }
+    })
+   
+    //console.log(data.datas);
+    //设置车辆展示信息
+    that.setData({
+      carInfoData: data.datas
+    })
+  },
+  onShow:function(){
+    
+  }
+})*/

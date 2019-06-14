@@ -35,7 +35,7 @@ Page({
 
     var id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '../chooseLib/chooseLib?id=11',
+      url: '../chooseLib/chooseLib',
     })
   },
   /**
@@ -60,6 +60,7 @@ Page({
         data = {
           "datas": res.data
         }
+        
         that.setData({
           carInfoData: data.datas
           
