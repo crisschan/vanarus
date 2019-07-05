@@ -1,6 +1,6 @@
 <!--pages/chooseLib/chooseLib.wxml-->
 <view class="container">
-
+<view class='card  b-shadow'><ad unit-id="adunit-e85077bbd5f3ed57"></ad></view>
 <block wx:for="{{carInfoData}}" wx:for-items="{{carInfoData}}" wx:key="id">
     <view class='card  b-shadow' bindtap='toggleBtn' data-id="{{item.id}}" data-index="{{index}}">
       <view class='nearCard-fl'>
@@ -25,7 +25,7 @@
   
 
 
-<view class='card  b-shadow'><ad unit-id="adunit-e85077bbd5f3ed57"></ad></view>
+
 
 
  <view class='nearCard-fr'>

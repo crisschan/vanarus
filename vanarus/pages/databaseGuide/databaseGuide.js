@@ -1,4 +1,6 @@
 // pages/addFunction/addFunction.js
+// 在页面中定义插屏广告
+let interstitialAd = null
 
 const app = getApp()
 
@@ -10,6 +12,7 @@ Page({
 
   onLoad: function (options) {
     var that = this;
+    
     app.globalData.DB.collection('historylist').where({
       id: options.id
     }).get({
